@@ -2,48 +2,50 @@ import { DataTypes } from "sequelize";
 import{sequelize} from "../database/database.js";
 
 export const PersonaDoc= sequelize.define('PersonaDoc',{
-    id:{
+    Id:{
         type: DataTypes.INTEGER,
         primaryKey:true,
         autoIncrement: true,
         allowNull: false
     },
-    docTipo: {
+    DocTipo: {
         type: DataTypes.STRING,
         allowNull: false,
         defaultValue: ""
     },
-    docNumeroc: {
+    DocNumeroc: {
         type: DataTypes.STRING,
         allowNull: false,
         defaultValue: ""
     },
-    fecRegistro:{
+    FechRegistro:{
         type: DataTypes.DATE,
         allowNull: false,
         defaultValue: "01/01/1900"
         
     },
     
-    responsable:{
+    UsuarioRegistro:{
         type: DataTypes.STRING,
         allowNull: false,
         defaultValue: ""
         
     },
-    maquina:{
+    MaquinaRegistro:{
         type: DataTypes.STRING,
         allowNull: false,
         defaultValue: ""
         
     },
-    ip:{
+    IPRegistro:{
         type: DataTypes.STRING,
         allowNull: false,
         defaultValue: ""
         
     }
-    //timestamps: false
-
-});
-
+    
+},
+{
+    timestamps: false
+}
+);

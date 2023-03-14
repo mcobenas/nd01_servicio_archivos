@@ -6,7 +6,7 @@ import "./models/PersonaDoc.js"
 async function main() {
     
     try {
-        await sequelize.sync({force:true});
+        //await sequelize.sync({force:true});
         //await sequelize.authenticate();
         //console.log('Connection has been established successfully.');
         app.listen(3000);
@@ -19,4 +19,3 @@ async function main() {
     
 }
 main();
-
